@@ -1,25 +1,5 @@
 #!/bin/sh
 
-syst=`uname -s`
-arch=`uname -m`
-name=`uname -n`
-
-if [ "$arch" = "x86_64" ] ; then
-  arch="amd64"
-fi
-if [ "$arch" = "Power Macintosh" ] ; then
-  arch="ppc"
-fi
-
-bin="canu-1.6/$syst-$arch/bin"
-
-if [ ! -d "$bin" ] ; then
-  bin="/data/projects/phillippy/software/canu-1.6"
-fi
-
-
-#  Store must exist: correction/asm.gkpStore
-
 #  Discover the job ID to run, from either a grid environment variable and a
 #  command line offset, or directly from the command line.
 #
