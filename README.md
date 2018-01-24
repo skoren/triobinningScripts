@@ -12,5 +12,9 @@ These scripts should only be used if you are interesting in reproducing the resu
 
 Example classifying an ecoli genome is in example/example.sh. It will download data for two E. coli strains and generate a binned assembly as well as a combined assembly for comparison.
 
+The input for k-mer counting must be fasta formatted. If you have a fastq file you can run
+
+`zcat $fastq | awk -v name=$name 'BEGIN {if (NR%2000000==1) {num+=1; print ">"name"."num} } {if (NR%4==2) print $1"N"}' > $name.fa`
+
 ## Citation:
  - Koren S, Rhie A, et al. Trio binning enables complete assembly of individual haplotypes. In prep (2018).
