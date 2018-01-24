@@ -40,3 +40,6 @@ java -cp ../ SubFasta k12.cut pacbio.fasta > k12.fasta
 java -cp ../ SubFasta o157.cut pacbio.fasta > o157.fasta
 ../canu/*/bin/canu -p asm -d k12 useGrid=false genomeSize=5m -pacbio-raw k12.fasta
 ../canu/*/bin/canu -p asm -d o157 useGrid=false genomeSize=5m -pacbio-raw o157.fasta
+
+# for comaprison smash them together
+../canu/*/bin/canu -p asm -d combined useGrid=false genomeSize=5m -pacbio-raw pacbio.fasta corOutCoverage=500 "batOptions=-dg 3 -db 3 -dr 1 -ca 500 -cp 50"

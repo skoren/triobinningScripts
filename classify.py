@@ -1,6 +1,7 @@
 import sys
 import math
 import argparse
+
 from Bio import SeqIO
 
 def reverse_complement(kmer):
@@ -35,8 +36,6 @@ for i in range(0,HAPLOTYPES):
             sys.exit(1)
    f.close()
    print >> sys.stderr, "Recorded %d haplpotype %d specfic %d-mers"%(len(haps[i]), i, merSize)
-
-survival = math.pow((1-ERATE), merSize)
 
 # now score read to chose a haplotype
 #we process fasta
