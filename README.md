@@ -8,7 +8,7 @@ Requires BioPython. Includes canu as a sub-module dependency.
 ## Running
 Example scripts (classifyReads.sh and input.fofn) show how to run classification in parallel on an SGE grid.
 
-Example classifying an ecoli genome is in example.sh
+Example classifying an ecoli genome is in examples/example.sh. It will download data for two E. coli strains and generate a binned assembly as well as a combined assembly for comparison.
 
 ## Learn
 
