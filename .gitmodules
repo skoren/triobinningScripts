@@ -1,3 +1,6 @@
 [submodule "canu"]
 	path = canu
 	url = https://github.com/marbl/canu.git
+[submodule "meryl"]
+	path = meryl
+	url = https://github.com/marbl/canu.git
