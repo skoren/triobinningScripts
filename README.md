@@ -14,7 +14,7 @@ Example classifying an ecoli genome is in example/example.sh. It will download d
 
 The input for k-mer counting must be fasta formatted. If you have a fastq file you can run
 
-`zcat $fastq | awk -v name=$name 'BEGIN {if (NR%2000000==1) {num+=1; print ">"name"."num} } {if (NR%4==2) print $1"N"}' > $name.fa`
+`zcat $fastq | awk -v name=$name 'BEGIN {num=0} {if (NR%2000000==1) {num+=1; print ">"name"."num} } {if (NR%4==2) print $1"N"}' > $name.fa`
 
 The shell script also has comments along the way but a brief outline of the steps:
 
