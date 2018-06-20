@@ -1,4 +1,4 @@
-# Meryl diff on parent meryl DB and classify child's reads manually
+# Classify child's reads manually before assembly
 
 ## What is this update about?
 Sometimes, you want to bin the reads your self. Yes, there is an easier way to do it, if you already have a meryl k-mer db built.
