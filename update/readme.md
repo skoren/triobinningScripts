@@ -1,7 +1,8 @@
-# Classify child's reads manually before assembly
+# Bin the child's read manually before assembly
 
 ## What is this update about?
-Sometimes, you want to bin the reads your self. Yes, there is an easier way to do it, if you already have a meryl k-mer db built.
+Sometimes, you want to bin the reads your self.
+Yes, there is a manual way to do it, if you already have a meryl k-mer db built for the parental reads.
 
 ## What is this script doing
 * Use meryl diff for getting haplotype specific k-mers from the parental illumina dataset
