@@ -21,7 +21,9 @@ echo "\
 meryl -Dh -s $mrg > $mrg.hist"
 meryl -Dh -s $mrg > $mrg.hist
 
-
+echo "\
+meryl -Dc -s $mrg > $mrg.count"
+meryl -Dc -s $mrg > $mrg.count
 
 echo "\
 java -jar -Xmx512m kmerHistToPloidyDepth.jar $mrg.hist > $mrg.hist.ploidy"
