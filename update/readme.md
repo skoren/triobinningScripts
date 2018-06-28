@@ -30,8 +30,8 @@ This script launches
 
 At the end, you can get total descriptive k-mers and haplotype-specific k-mers.
 ```
-cat <hap>.k<k-size>.count	# The distinct mers are the descriptive k-mers
-cat <hap>.k<k-size>.filt.count	# The distinct mers are the haplotype-specific k-mers
+meryl -Dc -s <hapA>.filt  # distinct mers are the descriptive k-mers
+meryl -Dc -s <hapA>.no<hapB> # hapA specific mers
 ```
 
 If you have illumina dataset of the child, you can run two more union operations to get the haplotype-specific k-mers found in the child’s genome.
