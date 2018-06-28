@@ -23,7 +23,8 @@ meryl -Dh -s $mrg > $mrg.hist
 
 
 
-echo "java -jar -Xmx512m kmerHistToPloidyDepth.jar $mrg.hist > $mrg.hist.ploidy"
+echo "\
+java -jar -Xmx512m kmerHistToPloidyDepth.jar $mrg.hist > $mrg.hist.ploidy"
 java -jar -Xmx512m kmerHistToPloidyDepth.jar $mrg.hist > $mrg.hist.ploidy
 
 x=`sed -n 2p $mrg.hist.ploidy | awk '{print $NF}'`
