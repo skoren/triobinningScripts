@@ -32,3 +32,8 @@ echo "build meryl db"
 echo "\
 meryl -B -C -s $name.fa -m $k -threads $SLURM_CPUS_PER_TASK -segments $SLURM_CPUS_PER_TASK -o $name.$k"
 meryl -B -C -s $name.fa -m $k -threads $SLURM_CPUS_PER_TASK -segments $SLURM_CPUS_PER_TASK -o $name.$k
+
+echo "count k-mers"
+echo "\
+meryl -Dc -s $name.$k"
+meryl -Dc -s $name.$k
