@@ -8,13 +8,14 @@ dbB=$3
 out=$dbA.no$dbB
 
 if ! [ -e $out.mcdat ]; then
-        echo "/path/to/canu-1.7/Linux-amd64/bin/meryl -M difference -s $dbA -s $dbB -o $out"
-        /path/to/canu-1.7/Linux-amd64/bin/meryl -M difference -s $dbA -s $dbB -o $out
-        echo "/path/to/canu-1.7/Linux-amd64/bin/meryl -Dc -s $out"
-        /path/to/canu-1.7/Linux-amd64/bin/meryl -Dc -s $out
+        echo "meryl -M difference -s $dbA -s $dbB -o $out"
+        meryl -M difference -s $dbA -s $dbB -o $out
+        echo "meryl -Dc -s $out"
+        meryl -Dc -s $out
         echo ""
 fi
 
 echo "Generate QR db"
-echo "/path/to/canu-1.7/canu/Linux-amd64/bin/simple-dump -s $out -e $dbA.only -m $k"
-/path/to/canu-1.7/canu/Linux-amd64/bin/simple-dump -s $out -e $dbA.only -m $k
+echo "\
+simple-dump -s $out -e $dbA.only -m $k"
+simple-dump -s $out -e $dbA.only -m $k
