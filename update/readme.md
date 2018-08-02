@@ -16,7 +16,7 @@ This update uses meryl and simple-dump in canu 1.7 or higher.
 Add canu/.../bin to your PATH.
 
 ## How to run
-1. Build meryl db and count haplotype specific k-mers
+### 1. Build meryl db and count haplotype specific k-mers
 Let’s say we have \<hapA\>_R\[1-2\]_001.fastq.gz and \<hapB\>_R\[1-2]_001.fastq.gz.
 We want hapA and hapB k-mer sets, which contains all k-mers.
 Given the k-mer count distribution, we can discard the erroneous k-mers.
