@@ -40,7 +40,7 @@ for i in range(0,HAPLOTYPES):
 # now score read to chose a haplotype
 #we process fasta
 for i in range(HAPLOTYPES,len(sys.argv)):
-   recs = [ (rec.name, rec.seq) for rec in SeqIO.parse(open(sys.argv[i]), "fasta")]
+   recs = [ (rec.name, str(rec.seq)) for rec in SeqIO.parse(open(sys.argv[i]), "fasta")]
    for name, seq in recs:
       readHap = ""
       readHapCount = 0
