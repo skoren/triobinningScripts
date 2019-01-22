@@ -52,5 +52,28 @@ AvgIdentity                    98.55                98.55     |	AvgIdentity     
 
 The result on the left is the combined assembly, fragmented into >400 contigs and only having 98.8% identity to the reference. In contrast, the haplotyped assembly has 1 contig covering the genome and is >99.99% identity.
 
+### Using k-mers over 31
+Modify the meryl code src/AS_UTL/kMer.H from
+```
+#define KMER_WORDS  1
+```
+to
+```
+#define KMER_WORDS  3
+```
+and src/AS_UTL/kMerHuge.H from
+```
+str[ms-i-1] = bitsToLetter[(mer >> (2*i)) & 0x03];
+```
+to
+```
+str[ms-i-1] = alphabet.bitsToLetter((mer >> (2*i)) & 0x03);
+```
+and re-compile
+
+### Using other k-mer counters
+
+The trio-binning approach is compatible with any k-mer counter, as long as you can generate the counts file in the expected format.
+
 ## Citation:
  - Koren S, Rhie A, et al. Trio binning enables complete assembly of individual haplotypes. In prep (2018).
