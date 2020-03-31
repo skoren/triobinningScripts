@@ -67,7 +67,7 @@ for i in range(HAPLOTYPES,len(sys.argv)):
       for i in range(0, HAPLOTYPES):
          if i in hapCounts:
             tot+=hapCounts[i]
-            if hapCounts[i] > 0 and hapCounts[i] < readHapCount and hapCounts[i] > secondBest:
+            if hapCounts[i] > 0 and hapCounts[i] <= readHapCount and hapCounts[i] > secondBest:
                secondBest = hapCounts[i]
 
             if hapCounts[i] > 0 and hapCounts[i] > readHapCount:
